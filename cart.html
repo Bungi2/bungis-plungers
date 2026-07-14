@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart | Bungi's Plungers</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+<h1>🪠 Bungi's Plungers</h1>
+<p class="motto">Engineering Reliable Drain Solutions Since 1974</p>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="cart.html">Cart</a></li>
+</ul>
+
+</nav>
+
+<section class="products-hero">
+
+<h1>Your Cart</h1>
+
+<p>Premium plungers selected by professionals.</p>
+
+<section class="cart-section">
+
+    <div id="cart-items"></div>
+
+    <div class="cart-total">
+
+        <h2>Total: $<span id="total-price">0.00</span></h2>
+
+        <br>
+
+        <a href="checkout.html" class="checkout-btn">
+            Checkout
+        </a>
+
+    </div>
+
+</section>
+
+<div id="cart-items"></div>
+
+<h2>Total: $<span id="total-price">0.00</span></h2>
+
+
+<script>
+  // Load cart data from localStorage
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+  // Calculate total
+  let total = 0;
+  cart.forEach(item => {
+    total += Number(item.price.replace("$", ""));
+  });
+  
+  // Update total price display
+  document.getElementById("total-price").textContent = total.toFixed(2);
+</script>
+
+
+</body>
+</html>
