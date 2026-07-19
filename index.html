@@ -30,14 +30,15 @@
     <header>
     <nav class="navbar">
 
-        <div class="logo">
+<div class="logo">
+    <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Bungi's Plungers Logo" class="logo-img">
 
-    <h1>🪠 Bungi's Plungers</h1>
-
-    <p class="motto">
-        Engineering Reliable Drain Solutions Since 1974
-    </p>
-
+        <div>
+            <h1>Bungi's Plungers</h1>
+            <p class="motto">Engineering Reliable Drain Solutions Since 1974</p>
+        </div>
+    </a>
 </div>
 <p class="motto">When Duty Flushes, We Answer.</p>
         <ul>
@@ -80,19 +81,25 @@
         <div class="product-card">
             <h3>The Clogfather</h3>
             <p>The plunger you can't refuse.</p>
-            <button>View Product</button>
+           <button onclick="viewProduct('The Clogfather')">
+    View Product
+</button>
         </div>
 
         <div class="product-card">
             <h3>Plungezilla</h3>
             <p>Built for legendary clogs.</p>
-            <button>View Product</button>
+            <button onclick="viewProduct('Plungezilla')">
+    View Product
+</button>
         </div>
 
         <div class="product-card">
             <h3>The Bunginator</h3>
             <p>Mexican food special.</p>
-            <button>View Product</button>
+            <button onclick="viewProduct('The Bunginator')">
+    View Product
+</button>
         </div>
 
     </div>
@@ -291,9 +298,27 @@
 </div>
 
 
+<div id="productModal" class="modal">
 
+    <div class="modal-content">
 
+        <span class="close" onclick="closeModal()">&times;</span>
 
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+
+        <p id="modalPrice"></p>
+
+        <p id="modalStock"></p>
+
+        <p id="modalRarity"></p>
+
+    </div>
+
+</div>
+
+<div id="toast" class="toast"></div>
 
 
 <script src="js/script.js"></script>

@@ -13,15 +13,17 @@
 </head>
 
 <body>
-
 <nav class="navbar">
 
 <div class="logo">
+    <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Bungi's Plungers Logo" class="logo-img">
 
-<h1>🪠 Bungi's Plungers</h1>
-
-<p class="motto">Engineering Reliable Drain Solutions Since 1974</p>
-
+        <div>
+            <h1>Bungi's Plungers</h1>
+            <p class="motto">Engineering Reliable Drain Solutions Since 1974</p>
+        </div>
+    </a>
 </div>
 
 </nav>
@@ -36,7 +38,7 @@
 
 <section class="checkout-container">
 
-<form>
+<form id="checkoutForm" class="checkout-form">
 
 <input type="text" placeholder="Full Name">
 
@@ -44,7 +46,7 @@
 
 <input type="text" placeholder="Address">
 
-<button>
+<button type="submit">
 
 Place Order
 
@@ -53,6 +55,14 @@ Place Order
 </form>
 
 </section>
+
+
+
+<div id="toast" class="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>

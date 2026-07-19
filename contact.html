@@ -14,14 +14,15 @@
 
 <nav class="navbar">
 
-    <div class="logo">
+<div class="logo">
+    <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Bungi's Plungers Logo" class="logo-img">
 
-    <h1>🪠 Bungi's Plungers</h1>
-
-    <p class="motto">
-        Engineering Reliable Drain Solutions Since 1974
-    </p>
-
+        <div>
+            <h1>Bungi's Plungers</h1>
+            <p class="motto">Engineering Reliable Drain Solutions Since 1974</p>
+        </div>
+    </a>
 </div>
 
     <ul>
@@ -79,20 +80,40 @@
 <section class="contact-form-section">
 
     <h2>Send Us a Message</h2>
+<form
+    action="https://formspree.io/f/xrenbklg"
+    method="POST"
+    class="contact-form">
 
-    <form class="contact-form">
+    <input
+        type="text"
+        name="name"
+        placeholder="Full Name"
+        required>
 
-        <input type="text" placeholder="Full Name" required>
+    <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required>
 
-        <input type="email" placeholder="Email Address" required>
+    <input
+        type="text"
+        name="subject"
+        placeholder="Subject"
+        required>
 
-        <input type="text" placeholder="Subject" required>
+    <textarea
+        name="message"
+        placeholder="How can we help?"
+        rows="6"
+        required></textarea>
 
-        <textarea placeholder="How can we help?" rows="6" required></textarea>
+    <button type="submit">
+        Send Message
+    </button>
 
-        <button type="submit">Send Message</button>
-
-    </form>
+</form>
 
 </section>
 
@@ -170,5 +191,8 @@
 
 </footer>
 
+<div id="toast" class="toast"></div>
+
+<script src="js/script.js"></script>
 </body>
 </html>

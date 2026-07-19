@@ -13,8 +13,14 @@
 <nav class="navbar">
 
 <div class="logo">
-<h1>🪠 Bungi's Plungers</h1>
-<p class="motto">Engineering Reliable Drain Solutions Since 1974</p>
+    <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="Bungi's Plungers Logo" class="logo-img">
+
+        <div>
+            <h1>Bungi's Plungers</h1>
+            <p class="motto">Engineering Reliable Drain Solutions Since 1974</p>
+        </div>
+    </a>
 </div>
 
 <ul>
@@ -27,9 +33,11 @@
 
 <section class="products-hero">
 
-<h1>Your Cart</h1>
+    <h1>Your Cart</h1>
 
-<p>Premium plungers selected by professionals.</p>
+    <p>Premium plungers selected by professionals.</p>
+
+</section>
 
 <section class="cart-section">
 
@@ -49,25 +57,27 @@
 
 </section>
 
-<div id="cart-items"></div>
-
-<h2>Total: $<span id="total-price">0.00</span></h2>
 
 
-<script>
-  // Load cart data from localStorage
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  
-  // Calculate total
-  let total = 0;
-  cart.forEach(item => {
-    total += Number(item.price.replace("$", ""));
-  });
-  
-  // Update total price display
-  document.getElementById("total-price").textContent = total.toFixed(2);
-</script>
 
+
+
+
+
+
+<div class="cart-buttons">
+    <button onclick="clearCart()" class="clear-btn">
+        🧹 Clear Cart
+    </button>
+
+    <a href="checkout.html" class="checkout-btn">
+        💳 Checkout
+    </a>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
